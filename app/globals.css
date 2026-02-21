@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/*
+  Portfolio color palette
+  ─────────────────────────────────────────────────────────────
+  background  #ffffff   White page background
+  primary     #1C1410   Deep warm brown-black — primary text
+  plum        #412234   Deep plum — dark surfaces, strong emphasis
+  purple      #6d466b   Muted purple — accents, interactive elements
+                        ⚠ Note: Tailwind ships a built-in purple scale
+                          (purple-50…purple-950). This flat token adds
+                          bg-purple / text-purple alongside those — no conflict,
+                          but be aware both sets of classes exist.
+  blush       #ead7d7   Soft blush — decorative surfaces and tints only
+                        ⚠ 1.4:1 against white. Never use as text on white
+                          or white text on blush. Use as a background with
+                          primary (13:1 AAA) or plum (10:1 AAA) text on top.
+  ─────────────────────────────────────────────────────────────
+  Contrast reference (WCAG AA = 4.5:1 normal text, 3:1 large/UI):
+    primary on white    18.1:1  AAA
+    plum on white       14.0:1  AAA
+    purple on white      7.7:1  AAA
+    white on plum       14.0:1  AAA
+    white on purple      7.7:1  AAA
+    primary on blush    13.1:1  AAA
+    plum on blush       10.1:1  AAA
+    purple on blush      5.6:1  AA
+  ─────────────────────────────────────────────────────────────
+*/
+@theme {
+  --color-background: #ffffff;
+  --color-primary:    #1C1410;
+  --color-plum:       #412234;
+  --color-purple:     #6d466b;
+  --color-blush:      #ead7d7;
+}
+
+/*
+  Font tokens — Next.js injects the actual font stacks as CSS custom properties
+  at runtime via the variable names set in layout.tsx. @theme inline defers
+  resolution so the vars are read at use-time rather than eagerly.
+*/
+@theme inline {
+  --font-sans:  var(--font-geist-sans);
+  --font-serif: var(--font-young-serif);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+
+/*
+  Hero section background treatment
+  ─────────────────────────────────────────────────────────────
+  Layers (back to front):
+  1. Radial gradient: warm brown center (#251813) → base primary (#1C1410) →
+     slightly cooler dark edge (#100D0B). Subtle — all values within ~15 units
+     of each other so the shift reads as warmth, not drama.
+  2. SVG feTurbulence noise at 3.5% opacity for organic grain texture.
+     Baked into the SVG rect so no extra element or z-index management needed.
+  ─────────────────────────────────────────────────────────────
+*/
+.hero-bg {
+  background-color: #412234;
+  background-image:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/></svg>"),
+    radial-gradient(ellipse at 50% 40%, #4d2840 0%, #412234 55%, #2e1827 100%);
+  background-size: 200px 200px, 100% 100%;
+}
