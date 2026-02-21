@@ -23,7 +23,8 @@ export default function Header() {
         <Link
           href="/"
           aria-current={pathname === "/" ? "page" : undefined}
-          className="w-fit rounded text-sm font-medium text-primary transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
+          className="w-fit rounded text-2xl font-medium text-primary transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
+          style={{ fontFamily: "var(--font-cyrene)" }}
         >
           Claire Chiu
         </Link>

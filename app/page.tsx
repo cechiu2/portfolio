@@ -15,7 +15,7 @@ export default function Home() {
           <h1
             id="hero-heading"
             className="text-5xl leading-tight text-white lg:text-7xl"
-            style={{ fontFamily: "var(--font-young-serif)" }}
+            style={{ fontFamily: "var(--font-cyrene)" }}
           >
             Claire Chiu
           </h1>
