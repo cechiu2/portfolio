@@ -36,3 +36,10 @@ The site itself is a design project — it should feel intentional, minimal, and
 - Never leave any file in a partially edited state — always complete edits fully
 - After making any changes, confirm all modified files are syntactically valid
 - Do not run any npm install or package management commands unless explicitly asked to by the user
+- The following files are PROTECTED and must never be modified under any circumstances:
+  - postcss.config.mjs
+  - next.config.ts
+  - package.json
+  - tsconfig.json
+  - eslint.config.mjs
+- If a task seems to require editing these files, stop and ask the user first
