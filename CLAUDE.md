@@ -28,3 +28,11 @@ The site itself is a design project — it should feel intentional, minimal, and
 - Name components clearly (e.g. HeroSection.tsx, ProjectCard.tsx)
 - Add a short comment above each component explaining what it does
 - Keep components small and focused — if it's getting long, split it up
+
+## Project stability notes
+- This project has experienced repeated Turbopack instability and package.json corruption
+- Never modify package.json, postcss.config.mjs, or any config files unless absolutely necessary
+- If config files must be changed, make the smallest possible edit and confirm the change is valid before finishing
+- Never leave any file in a partially edited state — always complete edits fully
+- After making any changes, confirm all modified files are syntactically valid
+- Do not run any npm install or package management commands unless explicitly asked to by the user

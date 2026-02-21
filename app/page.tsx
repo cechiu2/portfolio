@@ -5,7 +5,7 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b border-primary/10 bg-background">
         <nav
           aria-label="Main navigation"
-          className="mx-auto flex max-w-3xl flex-col gap-3 px-6 py-3 sm:flex-row sm:items-start sm:justify-between sm:gap-0"
+          className="flex flex-col gap-3 px-6 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-0"
         >
           <a
             href="/"
