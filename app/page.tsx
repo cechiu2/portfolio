@@ -8,19 +8,19 @@ import ProjectCard from "@/components/ProjectCard";
 // Placeholder project data — replace titles, categories, and hrefs with real content
 const projects = [
   {
-    title: "Project One",
+    title: "Gather ",
     company: "Freelance",
-    category: "UX Design · Engineering",
+    category: "UX Design",
     year: "2025",
-    href: "#",
+    href: "/gather",
     placeholderGradient: "bg-gradient-to-br from-blush to-purple",
   },
   {
-    title: "Project Two",
+    title: "Goodreads Redesign",
     company: "Concept",
-    category: "UX Design · Engineering",
-    year: "2024",
-    href: "#",
+    category: "UX Design",
+    year: "2025",
+    href: "/goodreads",
     placeholderGradient: "bg-gradient-to-br from-purple to-plum",
   },
 ];

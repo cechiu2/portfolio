@@ -10,6 +10,9 @@
 
 ## Active Tasks
 
+
+
+
 <!-- TASK TEMPLATE — copy this block for each new task
 ### TASK-XXX: [Short task name]
 **Stage:** [Planning | In Progress | Review | Blocked]
@@ -39,3 +42,6 @@
 <!-- Collapsed one-line entries go here once a task is fully done -->
 <!-- Format: TASK-XXX | [task name] | Completed [date] | Files: [list of files changed] -->
 TASK-001 | Restructure homepage layout — compact intro + work section | Completed 2026-02-24 | Files: app/page.tsx, components/WorkSection.tsx (new)
+TASK-002 | Replace circular photo placeholder with real portrait image | Completed 2026-02-24 | Files: components/IntroSection.tsx
+TASK-003 | Create Gather and Goodreads placeholder pages, wire up project card links | Completed 2026-02-24 | Files: app/gather/page.tsx (new), app/goodreads/page.tsx (new), app/page.tsx
+TASK-004 | Update footer with attribution text and nav links | Completed 2026-02-24 | Files: components/Footer.tsx

@@ -24,7 +24,7 @@ export default function Header() {
       >
         <Link
           href="/"
-          className="w-fit rounded text-2xl font-medium text-primary transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
+          className="w-fit rounded text-2xl font-medium text-primary transition-colors hover:text-purple focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
           style={{ fontFamily: "var(--font-young-serif)" }}
         >
           Claire Chiu
@@ -41,8 +41,8 @@ export default function Header() {
                   className={
                     "rounded text-sm uppercase tracking-wide focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 " +
                     (isActive
-                      ? "text-purple underline decoration-purple decoration-2 underline-offset-2"
-                      : "text-primary transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2")
+                      ? "text-purple"
+                      : "text-primary transition-colors hover:text-purple")
                   }
                 >
                   {label}

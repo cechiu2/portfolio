@@ -1,7 +1,8 @@
 // IntroSection — split two-column editorial homepage intro.
 // Left column (60% desktop): statement heading + animated descriptors + Currently/Previously.
-// Right column (40% desktop): circular photo + short bio + LinkedIn link.
+// Right column (40% desktop): portrait photo + short bio + LinkedIn link.
 // On mobile both columns stack vertically, left (text) on top.
+import Image from "next/image";
 import AnimatedTagline from "@/components/AnimatedTagline";
 
 export default function IntroSection() {
@@ -10,7 +11,7 @@ export default function IntroSection() {
       aria-labelledby="intro-heading"
       className="w-full px-6 py-10 sm:py-14"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-start md:gap-16">
+      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-center md:gap-16">
 
         {/* ── Left column — statement + animated text + status ── */}
         <div className="flex flex-col gap-6 md:w-[60%]">
@@ -50,19 +51,18 @@ export default function IntroSection() {
         </div>
 
         {/* ── Right column — photo + bio + LinkedIn ── */}
-        {/* items-center on mobile (centers the photo); items-start on desktop */}
+        {/* items-center centers photo on mobile; self-center on image handles desktop centering */}
         <div className="flex flex-col items-center gap-5 md:w-[40%] md:items-start">
 
-          {/* Circular photo placeholder — w-48/56 on mobile, fills column on desktop */}
-          <div
-            role="img"
-            aria-label="Photo of Claire Chiu — placeholder, image coming soon"
-            className="flex aspect-square w-48 items-center justify-center rounded-full bg-blush sm:w-56 md:w-full"
-          >
-            <span className="select-none text-sm text-primary/40" aria-hidden="true">
-              Photo
-            </span>
-          </div>
+          {/* Portrait photo — vintage photo booth, rectangular, ~300px tall */}
+          <Image
+            src="/images/IMG_0232.jpg"
+            alt="Claire Chiu, product designer and software engineer, in a vintage photo booth portrait."
+            width={225}
+            height={300}
+            className="h-[300px] w-auto self-center object-cover"
+            priority
+          />
 
           {/* Short bio — Geist Sans (font-sans via body default) */}
           <p className="text-center text-sm leading-relaxed text-primary/70 sm:text-base md:text-left">
@@ -72,8 +72,10 @@ export default function IntroSection() {
 
           {/* LinkedIn link — plum focus ring on white background */}
           <a
-            href="#"
-            aria-label="View Claire's LinkedIn profile"
+            href="https://www.linkedin.com/in/cechiu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Claire's LinkedIn profile (opens in new tab)"
             className="inline-flex items-center gap-2 rounded-sm text-primary/60 transition-colors hover:text-plum focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
           >
             {/* LinkedIn logo mark */}
