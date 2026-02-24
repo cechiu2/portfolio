@@ -50,6 +50,17 @@ body {
   color: var(--color-primary);
 }
 
+/*
+  Custom cursor — hide the native browser cursor on pointer/hover-capable devices only.
+  touch-only devices (mobile, tablet) are unaffected because they don't match (hover: hover).
+  The !important overrides UA stylesheet cursor: pointer on interactive elements.
+*/
+@media (hover: hover) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
 
 /*
   Hero section background treatment

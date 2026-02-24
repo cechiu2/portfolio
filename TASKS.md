@@ -1,0 +1,41 @@
+# TASKS.md — Portfolio Project Task Tracker
+
+## How to use this file
+- Active and in-progress tasks are tracked in full detail below
+- Completed tasks are collapsed to one-line entries in the Completed Tasks log
+- Task IDs are never reused
+- This file must be updated in real time as work progresses
+
+---
+
+## Active Tasks
+
+<!-- TASK TEMPLATE — copy this block for each new task
+### TASK-XXX: [Short task name]
+**Stage:** [Planning | In Progress | Review | Blocked]
+**Status:** [NOT_STARTED | IN_PROGRESS | COMPLETE | BLOCKED]
+**Started:** [date]
+**Last updated:** [date]
+
+**Implementation spec:**
+[A clear description of what needs to be built or changed and why]
+
+**Checklist:**
+- [ ] Step one
+- [ ] Step two
+- [ ] Step three
+
+**Files affected:**
+- `path/to/file.tsx`
+- `path/to/other/file.ts`
+
+**Notes:**
+[Any important decisions made, blockers encountered, or context for the next session]
+-->
+
+---
+
+## Completed Tasks
+<!-- Collapsed one-line entries go here once a task is fully done -->
+<!-- Format: TASK-XXX | [task name] | Completed [date] | Files: [list of files changed] -->
+TASK-001 | Restructure homepage layout — compact intro + work section | Completed 2026-02-24 | Files: app/page.tsx, components/WorkSection.tsx (new)

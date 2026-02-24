@@ -43,3 +43,13 @@ The site itself is a design project — it should feel intentional, minimal, and
   - tsconfig.json
   - eslint.config.mjs
 - If a task seems to require editing these files, stop and ask the user first
+
+## Task tracking system
+- All work must be tracked in TASKS.md in the project root
+- Before starting any task, create a new task entry with a unique ID, stage, status, implementation spec, checklist, and file list
+- Update the task status and checklist in real time as work progresses
+- If a session ends mid-task, leave the task in IN_PROGRESS status with the checklist showing exactly what is and isn't done
+- When a task is fully complete, collapse it to a one-line history entry in the Completed Tasks log at the bottom of TASKS.md
+- Never start a new session without first reading TASKS.md to understand what is in progress and what has been completed
+- At the start of every session, report the current state of TASKS.md to the user before doing anything else
+- Task IDs follow the format TASK-001, TASK-002, etc. and are never reused

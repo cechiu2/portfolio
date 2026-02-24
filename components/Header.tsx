@@ -1,14 +1,16 @@
 "use client";
 
 // Shared site header with primary navigation.
-// Client component so usePathname can mark the current page with aria-current="page".
+// The homepage (/) is the work page — the Work nav link points to /.
+// usePathname drives aria-current and active link styles.
+// Logo links to / but carries no aria-current — that role belongs to the Work nav item.
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { href: "/work", label: "Work" },
+  { href: "/", label: "Work" },
   { href: "/process", label: "Process" },
-  { href: "/contact", label: "Contact Me!" },
+  { href: "/contact", label: "Contact Me :)" },
 ];
 
 export default function Header() {
@@ -22,24 +24,32 @@ export default function Header() {
       >
         <Link
           href="/"
-          aria-current={pathname === "/" ? "page" : undefined}
           className="w-fit rounded text-2xl font-medium text-primary transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
-          style={{ fontFamily: "var(--font-cyrene)" }}
+          style={{ fontFamily: "var(--font-young-serif)" }}
         >
           Claire Chiu
         </Link>
+
         <ul className="flex flex-wrap gap-x-6 gap-y-2" role="list">
-          {navLinks.map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                aria-current={pathname === href ? "page" : undefined}
-                className="rounded text-sm uppercase tracking-wide text-primary/70 transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href;
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={
+                    "rounded text-sm uppercase tracking-wide focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 " +
+                    (isActive
+                      ? "text-purple underline decoration-purple decoration-2 underline-offset-2"
+                      : "text-primary transition-colors hover:text-purple hover:underline hover:decoration-purple hover:decoration-2")
+                  }
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

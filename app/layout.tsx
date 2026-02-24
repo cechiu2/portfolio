@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Young_Serif, Geist } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 // Young Serif — editorial display serif for headings. Weight 400 only (no bold variant).
 const youngSerif = Young_Serif({
@@ -45,6 +46,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <CustomCursor />
       </body>
     </html>
   );
