@@ -19,6 +19,7 @@
 
 
 
+
 <!-- TASK TEMPLATE — copy this block for each new task
 ### TASK-XXX: [Short task name]
 **Stage:** [Planning | In Progress | Review | Blocked]
@@ -57,3 +58,4 @@ TASK-007 | Add staggered scroll animation to ProjectMeta | Completed 2026-02-24 
 TASK-008 | Build ResearchCard component and rewrite ResearchSection | Completed 2026-02-24 | Files: components/ResearchCard.tsx (new), components/ResearchSection.tsx, app/goodreads/page.tsx
 TASK-009 | Build DecisionBlock + rewrite DesignDecisionsSection with sticky scroll | Completed 2026-02-24 | Files: components/DecisionBlock.tsx (new), components/DesignDecisionsSection.tsx, app/goodreads/page.tsx
 TASK-010 | Build out OutcomeSection, ReflectionSection, NextProject | Completed 2026-02-24 | Files: components/OutcomeSection.tsx, components/ReflectionSection.tsx, components/NextProject.tsx, app/goodreads/page.tsx
+TASK-011 | Create FaviconAnimator component and add to root layout | Completed 2026-02-24 | Files: components/FaviconAnimator.tsx (new), app/layout.tsx
