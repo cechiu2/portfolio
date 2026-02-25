@@ -4,7 +4,7 @@
 //
 // Desktop (no reduced motion): sticky scroll — the visual column stays fixed while the
 // user scrolls through each text block. The visual crossfades via AnimatePresence when
-// a new block reaches 40% in view, tracked with Framer Motion's useInView.
+// a new block reaches 20% in view, tracked with Framer Motion's useInView.
 //
 // Mobile and prefers-reduced-motion: simple stacked layout (text then visual per block)
 // with a gentle opacity fade-in on scroll entry.
@@ -32,9 +32,9 @@ export default function DesignDecisionsSection({
   const ref1 = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
 
-  const in0 = useInView(ref0, { amount: 0.4 });
-  const in1 = useInView(ref1, { amount: 0.4 });
-  const in2 = useInView(ref2, { amount: 0.4 });
+  const in0 = useInView(ref0, { amount: 0.2 });
+  const in1 = useInView(ref1, { amount: 0.2 });
+  const in2 = useInView(ref2, { amount: 0.2 });
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -57,9 +57,16 @@ export default function DesignDecisionsSection({
         Design Decisions
       </h2>
 
+      <p className="mb-8 text-base leading-relaxed text-primary/70">
+        Given the one-week timeline, I made a deliberate choice: one focused,
+        high-fidelity pass rather than multiple rough iterations. The constraint
+        forced prioritization. I identified three areas where user feedback was
+        loudest and where design changes would have the highest leverage.
+      </p>
+
       {/* ── Reduced motion: stacked layout, all screen sizes ─────────────── */}
       {prefersReduced && (
-        <div className="mt-8 space-y-16">
+        <div className="space-y-16">
           {blocks.map((block) => (
             <motion.div
               key={block.number}
@@ -79,7 +86,7 @@ export default function DesignDecisionsSection({
       {!prefersReduced && (
         <>
           {/* Mobile: stacked text + visual per block */}
-          <div className="mt-8 space-y-16 sm:hidden">
+          <div className="space-y-16 sm:hidden">
             {blocks.map((block) => (
               <div key={block.number}>
                 <DecisionBlock {...block} />
@@ -89,35 +96,39 @@ export default function DesignDecisionsSection({
           </div>
 
           {/* Desktop: sticky two-column layout */}
-          <div className="hidden sm:flex mt-8 gap-10 items-start">
+          <div className="hidden sm:flex gap-10">
             {/* Left column — scrollable text blocks */}
             <div className="flex-1">
               {blocks.slice(0, 3).map((block, i) => (
                 <div
                   key={block.number}
                   ref={blockRefs[i]}
-                  className="flex min-h-[75vh] items-center py-16"
+                  className="flex min-h-screen items-start pb-16"
                 >
                   <DecisionBlock {...block} />
                 </div>
               ))}
             </div>
 
-            {/* Right column — sticky visual that swaps on scroll */}
+            {/* Right column — outer div is in normal flow, inner div is sticky and
+                full-height so the phone can be centered via flexbox without
+                any negative transform that would bleed into adjacent sections. */}
             <div className="w-[40%] shrink-0">
-              <div className="sticky top-20 flex h-[calc(100vh-5rem)] items-center justify-center">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeIndex}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="flex w-full items-center justify-center"
-                  >
-                    {blocks[activeIndex]?.visual}
-                  </motion.div>
-                </AnimatePresence>
+              <div className="sticky top-0 flex h-screen items-center justify-center">
+                <div className="flex w-full items-center justify-center">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={activeIndex}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="flex w-full items-center justify-center"
+                    >
+                      {blocks[activeIndex]?.visual}
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
               </div>
             </div>
           </div>
