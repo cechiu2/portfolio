@@ -10,7 +10,12 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Work" },
   { href: "/process", label: "Process" },
-  { href: "/contact", label: "Contact Me :)" },
+  {
+    href: "https://drive.google.com/file/d/1bkBzM40K3nesGTd9nM0FxX4foEq_QfFw/view?usp=sharing",
+    label: "Resume",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
 ];
 
 export default function Header() {
@@ -31,12 +36,14 @@ export default function Header() {
         </Link>
 
         <ul className="flex flex-wrap gap-x-6 gap-y-2" role="list">
-          {navLinks.map(({ href, label }) => {
+          {navLinks.map(({ href, label, target, rel }) => {
             const isActive = pathname === href;
             return (
               <li key={href}>
                 <Link
                   href={href}
+                  target={target}
+                  rel={rel}
                   aria-current={isActive ? "page" : undefined}
                   className={
                     "rounded text-sm uppercase tracking-wide focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 " +
