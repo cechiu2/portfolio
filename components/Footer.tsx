@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="flex items-center justify-between px-6 py-6">
 
         <p className="text-sm text-primary">
-          Designed and coded by Claire :)
+          This website was designed and coded by Claire :)
         </p>
 
         <nav aria-label="Footer links" className="flex items-center gap-6">
