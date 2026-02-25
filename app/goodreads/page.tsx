@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 
 const metaItems = [
   { label: "Role", value: "UX Designer" },
-  { label: "Timeline", value: "8 weeks" },
-  { label: "Platform", value: "iOS & Web" },
+  { label: "Timeline", value: "1 week" },
+  { label: "Platform", value: "iOS" },
   { label: "Type", value: "Concept" },
 ];
 
@@ -89,25 +89,25 @@ const decisionBlocks = [
 
 const researchCards = [
   {
-    title: "User Interviews",
+    title: "The app buries what users actually want.",
     summary:
-      "Six 45-minute sessions with avid readers (3–10 books per year). Sessions were recorded, transcribed, and clustered into themes via affinity mapping.",
+      "Users come to Goodreads primarily to track their reading and browse books — but accessing your own profile requires navigating into a hamburger menu, Search and Discover are redundantly separated into different tabs, and the home feed is cluttered with low-value notifications. The Power User put it plainly: \"Accessing my profile shouldn't be buried in the menu.\" The Casual Tracker noted that the menu was full of features she'd never once used: \"Giveaways? Who is using that?\"",
     quote:
       "I always check what my friends are reading, but I can never find that tab. I end up just Googling instead.",
     citeLabel: "The Casual Tracker",
   },
   {
-    title: "Competitive Audit",
+    title: "Personal tracking is underpowered for what users actually want from it.",
     summary:
-      "Reviewed StoryGraph and Literal to understand where Goodreads is losing ground. Both competitors lead with social signals and mood-based filtering.",
+      "Users love data about themselves — streaks, monthly reading stats, personal notes on books. Goodreads has the raw material for this but surfaces almost none of it well on mobile. The Power User wanted \"a better section to take personal notes on books — the majority of users just want to read and track for personal means.\" The Discovery-Seeker drew a comparison that stuck with me: she wanted Goodreads to surface new releases by authors she already loves, the way Spotify's Fresh Finds surfaces new music from artists you follow. The insight was sharp — stop showing users a firehose of everything published this week and start showing them what's actually relevant to them.",
     quote:
       "StoryGraph actually shows me what my friends finished this week. That alone made me switch.",
     citeLabel: "The Genre Hopper",
   },
   {
-    title: "Key Insight",
+    title: "The social features exist but feel unfinished.",
     summary:
-      "Users trust peer recommendations 4× more than algorithmic suggestions — yet Goodreads buries friend activity three taps deep behind catalog browsing.",
+      "Users don't want to abandon the social layer — they want it to work. Reviews are the most valuable social content on Goodreads, but they're hard to find per book and mixed in with low-signal feed noise like friend-of-friend activity. The Social Reader wanted to see friends' reviews surfaced prominently on each book's page. The Power User wanted granular control over what appeared in her feed — the ability to mute certain activity types entirely. The underlying frustration was consistent: Goodreads gestures toward being a social platform without committing to it.",
     quote:
       "I don't want a list of 'books you might like.' I want to know what people I respect are actually reading.",
     citeLabel: "The Devoted Re-Reader",
@@ -129,24 +129,45 @@ export default function GoodreadsPage() {
 
         <ProblemSection>
           <p>
-            Goodreads has over 150 million registered users, but its interface
-            has barely changed since the early 2010s. Discovering what to read
-            next is buried under an overwhelming catalog, social features are
-            nearly invisible, and shelving actions — the core user behavior —
-            require navigating three levels deep.
+            Goodreads has a loyalty problem — not in the sense that users are
+            leaving, but in the sense that they stay despite the app, not
+            because of it. As an avid reader and long-time user myself, I knew
+            this feeling firsthand: the app that's supposed to make reading more
+            enjoyable was consistently getting in the way.
           </p>
           <p>
-            Readers abandon the platform mid-session not because they lack
-            interest, but because the product fails to surface the right book at
-            the right moment. Newer competitors like StoryGraph and Literal have
-            begun to capture the audience Goodreads is losing.
+            The core tension I identified:{" "}
+            <strong>
+              Goodreads is trying to be both a personal reading tracker and a
+              social platform, and its mobile app does justice to neither.
+            </strong>{" "}
+            Features users rely on daily are buried while rarely-used ones take
+            up prime real estate. The visual design hasn't meaningfully evolved
+            in years. And a quiet but significant gap between desktop and mobile
+            functionality forces dedicated users to context-switch between
+            platforms just to do basic things.
           </p>
         </ProblemSection>
 
-        <ResearchSection
-          intro="Six user interviews and a competitive audit across StoryGraph and Literal revealed a consistent pattern: readers want social discovery, not algorithmic noise."
-          cards={researchCards}
-        />
+        <ResearchSection cards={researchCards}>
+          <p>
+            With one week to work, I kept my research focused: I gathered
+            feedback from five dedicated Goodreads users — myself and four
+            friends who use the app regularly. My goal was directional clarity.
+            Where does the app consistently fail its most committed users?
+          </p>
+          <p>
+            I spoke with a range of user types:{" "}
+            <strong>The Casual Tracker</strong> (reads regularly, uses Goodreads
+            mainly to log finished books), <strong>The Power User</strong>{" "}
+            (maintains detailed shelves, tags, and reading statistics),{" "}
+            <strong>The Social Reader</strong> (most interested in friends'
+            reviews and community features), and{" "}
+            <strong>The Discovery-Seeker</strong> (primarily uses Goodreads to
+            find new books).
+          </p>
+          <p>The feedback fell into three clear clusters:</p>
+        </ResearchSection>
 
         <DesignDecisionsSection blocks={decisionBlocks} />
 
