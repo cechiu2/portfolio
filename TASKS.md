@@ -10,6 +10,14 @@
 
 ## Active Tasks
 
+TASK-026 | Add GatherBriefSection and GatherScopeSection + wire into page | Completed 2026-02-25 | Files: components/gather/GatherBriefSection.tsx (new), components/gather/GatherScopeSection.tsx (new), app/gather/page.tsx
+
+
+
+
+
+
+
 
 
 
@@ -65,3 +73,13 @@ TASK-014 | Add video mockups for Tracking and Social decision blocks | Completed
 TASK-015 | Add autoplay video thumbnail to Goodreads ProjectCard on homepage | Completed 2026-02-25 | Files: components/ProjectCard.tsx, app/page.tsx
 
 TASK-016 | Replace CaseStudyHero before/after with single hero video | Completed 2026-02-25 | Files: components/CaseStudyHero.tsx, app/goodreads/page.tsx
+TASK-017 | Scaffold /gather case study page with empty shell components | Completed 2026-02-25 | Files: components/gather/GatherProblemSection.tsx (new), components/gather/GatherApproachSection.tsx (new), components/gather/GatherVisualDirectionSection.tsx (new), components/gather/GatherDesignDecisionsSection.tsx (new), components/gather/GatherOutcomeSection.tsx (new), app/gather/page.tsx
+TASK-018 | Wire up CaseStudyHero and ProjectMeta props on /gather | Completed 2026-02-25 | Files: components/CaseStudyHero.tsx, app/gather/page.tsx
+TASK-019 | Fill in GatherProblemSection and GatherApproachSection | Completed 2026-02-25 | Files: components/gather/GatherProblemSection.tsx, components/gather/GatherApproachSection.tsx
+TASK-020 | Fill in GatherVisualDirectionSection | Completed 2026-02-25 | Files: components/gather/GatherVisualDirectionSection.tsx
+TASK-021 | Build GatherDecisionBlock + fill in GatherDesignDecisionsSection | Completed 2026-02-25 | Files: components/gather/GatherDecisionBlock.tsx (new), components/gather/GatherDesignDecisionsSection.tsx
+TASK-022 | Fill in GatherOutcomeSection; wire up ReflectionSection and NextProject | Completed 2026-02-25 | Files: components/gather/GatherOutcomeSection.tsx, app/gather/page.tsx
+TASK-023 | Accessibility pass on /components/gather/ — 7 issues fixed | Completed 2026-02-25 | Files: components/gather/GatherApproachSection.tsx, components/gather/GatherVisualDirectionSection.tsx, components/gather/GatherDecisionBlock.tsx
+TASK-024 | Fix Framer Motion Variants TypeScript errors across 5 components | Completed 2026-02-25 | Files: components/gather/GatherProblemSection.tsx, components/gather/GatherApproachSection.tsx, components/gather/GatherVisualDirectionSection.tsx, components/ProjectMeta.tsx, components/ResearchSection.tsx
+
+TASK-025 | NextProject coming soon state + wire Goodreads→Gather navigation | Completed 2026-02-25 | Files: components/NextProject.tsx, app/goodreads/page.tsx, app/gather/page.tsx

@@ -2,7 +2,7 @@
 
 // ProjectMeta — metadata grid for case studies. Displays key facts in a 2×2 grid on mobile
 // and a single row on sm+. Items stagger in with a fadeInUp animation on scroll entry.
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 interface MetaItem {
   label: string;
@@ -13,14 +13,14 @@ interface ProjectMetaProps {
   items: MetaItem[];
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.08 },
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,

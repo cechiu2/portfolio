@@ -11,7 +11,7 @@ const projects = [
     title: "Gather ",
     company: "Freelance",
     category: "UX Design",
-    year: "2025",
+    year: "2026",
     href: "/gather",
     placeholderGradient: "bg-gradient-to-br from-blush to-purple",
   },

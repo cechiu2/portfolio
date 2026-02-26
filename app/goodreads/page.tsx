@@ -198,10 +198,11 @@ export default function GoodreadsPage() {
           ]}
         />
 
+        {/* TODO: add thumbnailImage once Gather poster asset is ready */}
         <NextProject
-          title="Coming Soon"
-          href="#"
-          description="More case studies on the way."
+          title="Gather"
+          href="/gather"
+          description="Freelance mobile app design for an event discovery startup — 36 screens, end to end."
         />
       </CaseStudyLayout>
       <Footer />

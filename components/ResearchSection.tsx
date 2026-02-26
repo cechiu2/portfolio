@@ -4,7 +4,7 @@
 // heading, children for the intro narrative, and three ResearchCards in a responsive
 // grid. Cards stagger in sequentially on scroll entry via Framer Motion.
 import type { ReactNode } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import ResearchCard, { type ResearchCardProps } from "./ResearchCard";
 
 interface ResearchSectionProps {
@@ -12,14 +12,14 @@ interface ResearchSectionProps {
   cards: ResearchCardProps[];
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.12 },
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
