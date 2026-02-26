@@ -11,6 +11,8 @@
 ## Active Tasks
 
 TASK-026 | Add GatherBriefSection and GatherScopeSection + wire into page | Completed 2026-02-25 | Files: components/gather/GatherBriefSection.tsx (new), components/gather/GatherScopeSection.tsx (new), app/gather/page.tsx
+TASK-027 | Add body copy to Onboarding and The Event Page decision blocks | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-028 | Add body copy for Map, Profile, and Event Creation decision blocks with bold markup | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx, components/gather/GatherDecisionBlock.tsx
 
 
 

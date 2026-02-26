@@ -11,7 +11,7 @@ import { motion, useReducedMotion } from "framer-motion";
 export interface GatherDecisionBlockProps {
   number: string;
   title: string;
-  body: string;
+  body: ReactNode;
   /** Flexible visual slot — single mockup, comparison, or screen gallery */
   visuals?: ReactNode;
   /** Flip text and visual columns for visual rhythm alternation */
@@ -57,9 +57,9 @@ export default function GatherDecisionBlock({
             {title}
           </h3>
           {body && (
-            <p className="mt-5 text-base leading-relaxed text-primary/80">
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-primary/80">
               {body}
-            </p>
+            </div>
           )}
         </div>
 
