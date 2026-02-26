@@ -131,7 +131,7 @@ export default function GoodreadsPage() {
       <Header />
       <CaseStudyLayout>
         <CaseStudyHero
-          title="Goodreads Mobile Redesign"
+          title="Goodreads iOS Redesign"
           videoSrc="/videos/scrollthrough.webm"
           videoPoster="/images/scrollthrough.png"
           videoAlt="Full scrollthrough of the Goodreads mobile redesign"

@@ -16,7 +16,7 @@ const projects = [
     placeholderGradient: "bg-gradient-to-br from-blush to-purple",
   },
   {
-    title: "Goodreads Mobile Redesign",
+    title: "Goodreads iOS Redesign",
     company: "Concept",
     category: "UX Design",
     year: "2025",
