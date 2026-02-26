@@ -4,8 +4,9 @@
 // Layout: image on top (3:2 aspect ratio), title below, meta row at the bottom.
 // The entire card is a single accessible block link.
 // Framer Motion provides a subtle scale on hover; respects prefers-reduced-motion.
+import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useInView } from "framer-motion";
 
 interface ProjectCardProps {
   title: string;
@@ -19,6 +20,10 @@ interface ProjectCardProps {
   imageAlt?: string;
   /** Tailwind gradient classes for the placeholder div, e.g. "bg-gradient-to-br from-blush to-purple" */
   placeholderGradient?: string;
+  /** Path to a webm video shown in the thumbnail instead of an image */
+  videoSrc?: string;
+  /** Poster image shown before the video plays */
+  videoPoster?: string;
 }
 
 export default function ProjectCard({
@@ -30,8 +35,20 @@ export default function ProjectCard({
   imageSrc,
   imageAlt = "",
   placeholderGradient = "bg-gradient-to-br from-blush to-purple",
+  videoSrc,
+  videoPoster,
 }: ProjectCardProps) {
   const prefersReducedMotion = useReducedMotion();
+
+  const thumbnailRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const inView = useInView(thumbnailRef, { once: true, amount: 0.2 });
+
+  useEffect(() => {
+    if (inView && !prefersReducedMotion && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [inView, prefersReducedMotion]);
 
   return (
     // Outer element is the link; rounded-xl shapes the focus ring.
@@ -45,8 +62,23 @@ export default function ProjectCard({
       className="group block rounded-xl focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
     >
       {/* ── Image area — overflow-hidden clips the gradient/photo to rounded corners ── */}
-      <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl">
-        {imageSrc ? (
+      <div ref={thumbnailRef} className="relative aspect-[3/2] w-full overflow-hidden rounded-xl">
+        {videoSrc ? (
+          prefersReducedMotion ? (
+            <div className={`h-full w-full ${placeholderGradient}`} aria-hidden="true" />
+          ) : (
+            <video
+              ref={videoRef}
+              muted
+              loop
+              playsInline
+              poster={videoPoster}
+              className="h-full w-full object-cover"
+            >
+              <source src={videoSrc} type="video/webm" />
+            </video>
+          )
+        ) : imageSrc ? (
           <Image
             src={imageSrc}
             alt={imageAlt}

@@ -8,6 +8,9 @@ import ProjectMeta from "@/components/ProjectMeta";
 import ProblemSection from "@/components/ProblemSection";
 import ResearchSection from "@/components/ResearchSection";
 import DesignDecisionsSection from "@/components/DesignDecisionsSection";
+import NavigationVideoMockup from "@/components/NavigationVideoMockup";
+import TrackingVideoMockup from "@/components/TrackingVideoMockup";
+import SocialVideoMockup from "@/components/SocialVideoMockup";
 import OutcomeSection from "@/components/OutcomeSection";
 import ReflectionSection from "@/components/ReflectionSection";
 import NextProject from "@/components/NextProject";
@@ -25,17 +28,6 @@ const metaItems = [
   { label: "Type", value: "Concept" },
 ];
 
-// Phone mockup shape reused across decision block visuals
-function PhoneMockup({ gradient, label }: { gradient: string; label: string }) {
-  return (
-    <div
-      className={`aspect-[9/19] w-full max-w-[200px] mx-auto rounded-[2.5rem] border border-primary/10 ${gradient}`}
-      role="img"
-      aria-label={label}
-    />
-  );
-}
-
 const decisionBlocks = [
   {
     number: 1,
@@ -46,12 +38,7 @@ const decisionBlocks = [
       "I replaced the existing navigation with a persistent bottom nav bar with four tabs: Home, My Books, Explore, and Profile. This promotes the destinations users visit most to always-visible, one-tap access. The hamburger menu was retained but deprioritized — stripped of low-value items and reserved for secondary settings and customization. Search was consolidated into Explore, reflecting how users actually think about discovery rather than how Goodreads had historically organized it.",
     rationale:
       "Navigation is the skeleton of any app. Getting it wrong taxes every single interaction; getting it right makes everything else feel easier. It was also the most consistently mentioned pain point across all five users.",
-    visual: (
-      <PhoneMockup
-        gradient="bg-gradient-to-b from-blush/50 to-purple/30"
-        label="Phone mockup: social-first home feed redesign placeholder"
-      />
-    ),
+    visual: <NavigationVideoMockup />,
   },
   {
     number: 2,
@@ -62,12 +49,7 @@ const decisionBlocks = [
       "I redesigned the My Books and Profile screens to front-load the data users care about: reading streaks, monthly snapshots, currently-reading progress at a glance. I added a personal notes feature to the book detail view — a frequently requested but entirely absent capability. I also introduced a tag-based shelving system that lets users organize and filter books across multiple categories simultaneously, replacing the more rigid existing shelf structure.",
     rationale:
       "The most beloved tracking apps — Letterboxd, Strava, even Spotify Wrapped — succeed because they make users feel seen by their own data. Goodreads has years of rich reading data per user and largely fails to surface it in ways that feel personal or satisfying.",
-    visual: (
-      <PhoneMockup
-        gradient="bg-gradient-to-b from-purple/30 to-plum/50"
-        label="Phone mockup: one-tap shelving on book page placeholder"
-      />
-    ),
+    visual: <TrackingVideoMockup />,
   },
   {
     number: 3,
@@ -78,12 +60,7 @@ const decisionBlocks = [
       "Rather than overhauling the social layer entirely, I streamlined it. The home feed was refocused on high-signal activity from people users actually follow. A monthly snapshot header was added at the top of the home screen — a personal check-in that grounds the social feed in your own reading context before showing you what friends are doing. The book detail page now surfaces friend reviews prominently alongside community reviews, making the social layer feel useful rather than ambient.",
     rationale:
       "A full social redesign was out of scope for one week, and overbuilding social features that users hadn't explicitly asked for would have been solving the wrong problem. The feedback was clear: users didn't want more social features, they wanted the existing ones to work better.",
-    visual: (
-      <PhoneMockup
-        gradient="bg-gradient-to-b from-plum/50 to-purple/20"
-        label="Phone mockup: unified book page hierarchy placeholder"
-      />
-    ),
+    visual: <SocialVideoMockup />,
   },
 ];
 
@@ -155,8 +132,9 @@ export default function GoodreadsPage() {
       <CaseStudyLayout>
         <CaseStudyHero
           title="Goodreads Mobile Redesign"
-          beforeAlt="Screenshot of the original Goodreads app home screen, showing a dense catalog layout with small text and limited social activity"
-          afterAlt="Screenshot of the redesigned Goodreads app home screen, featuring a social-first feed with friend reading activity displayed prominently"
+          videoSrc="/videos/scrollthrough.webm"
+          videoPoster="/images/scrollthrough.png"
+          videoAlt="Full scrollthrough of the Goodreads mobile redesign"
         />
 
         <ProjectMeta items={metaItems} />
@@ -165,7 +143,7 @@ export default function GoodreadsPage() {
           <p>
             Goodreads has a loyalty problem. Not in the sense that users are
             leaving, but in the sense that they stay <em>despite</em> the app,
-            not
+            not 
             <em>because</em> of it. As an avid reader and long-time user myself,
             I knew this feeling firsthand: the app that's supposed to make
             reading more enjoyable was consistently getting in the way.

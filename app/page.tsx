@@ -16,12 +16,14 @@ const projects = [
     placeholderGradient: "bg-gradient-to-br from-blush to-purple",
   },
   {
-    title: "Goodreads Redesign",
+    title: "Goodreads Mobile Redesign",
     company: "Concept",
     category: "UX Design",
     year: "2025",
     href: "/goodreads",
     placeholderGradient: "bg-gradient-to-br from-purple to-plum",
+    videoSrc: "/videos/scrollthrough.webm",
+    videoPoster: "/images/scrollthrough.png",
   },
 ];
 

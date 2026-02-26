@@ -59,3 +59,9 @@ TASK-008 | Build ResearchCard component and rewrite ResearchSection | Completed 
 TASK-009 | Build DecisionBlock + rewrite DesignDecisionsSection with sticky scroll | Completed 2026-02-24 | Files: components/DecisionBlock.tsx (new), components/DesignDecisionsSection.tsx, app/goodreads/page.tsx
 TASK-010 | Build out OutcomeSection, ReflectionSection, NextProject | Completed 2026-02-24 | Files: components/OutcomeSection.tsx, components/ReflectionSection.tsx, components/NextProject.tsx, app/goodreads/page.tsx
 TASK-011 | Create FaviconAnimator component and add to root layout | Completed 2026-02-24 | Files: components/FaviconAnimator.tsx (new), app/layout.tsx
+TASK-012 | Add video mockup for Navigation Restructure decision block | Completed 2026-02-25 | Files: components/NavigationVideoMockup.tsx (new), app/goodreads/page.tsx
+TASK-013 | Fix phone screen swap + sticky phone centering in DesignDecisionsSection | Completed 2026-02-25 | Files: components/DesignDecisionsSection.tsx
+TASK-014 | Add video mockups for Tracking and Social decision blocks | Completed 2026-02-25 | Files: components/TrackingVideoMockup.tsx (new), components/SocialVideoMockup.tsx (new), app/goodreads/page.tsx
+TASK-015 | Add autoplay video thumbnail to Goodreads ProjectCard on homepage | Completed 2026-02-25 | Files: components/ProjectCard.tsx, app/page.tsx
+
+TASK-016 | Replace CaseStudyHero before/after with single hero video | Completed 2026-02-25 | Files: components/CaseStudyHero.tsx, app/goodreads/page.tsx
