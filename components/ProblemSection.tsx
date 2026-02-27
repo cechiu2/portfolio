@@ -8,7 +8,7 @@ interface ProblemSectionProps {
 
 export default function ProblemSection({ children }: ProblemSectionProps) {
   return (
-    <section aria-labelledby="problem-heading">
+    <section aria-labelledby="problem-heading" className="mx-auto max-w-3xl">
       <h2
         id="problem-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-4"

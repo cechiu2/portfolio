@@ -16,6 +16,8 @@ export interface GatherDecisionBlockProps {
   visuals?: ReactNode;
   /** Flip text and visual columns for visual rhythm alternation */
   reverse?: boolean;
+  /** Vertically center the visual column alongside the text on desktop */
+  centerVisual?: boolean;
 }
 
 export default function GatherDecisionBlock({
@@ -24,6 +26,7 @@ export default function GatherDecisionBlock({
   body,
   visuals,
   reverse = false,
+  centerVisual = false,
 }: GatherDecisionBlockProps) {
   const prefersReduced = useReducedMotion();
 
@@ -38,10 +41,10 @@ export default function GatherDecisionBlock({
       <div
         className={`flex flex-col gap-10 sm:gap-14 ${
           reverse ? "sm:flex-row-reverse" : "sm:flex-row"
-        }`}
+        }${centerVisual ? " sm:items-center" : ""}`}
       >
-        {/* Text column */}
-        <div className="flex-1">
+        {/* Text column — max-w-md keeps prose readable at wider section widths */}
+        <div className="flex-1 max-w-md">
           {/* Large decorative number — aria-hidden because it's purely visual */}
           <span
             className="block select-none text-8xl leading-none text-primary/[0.07]"

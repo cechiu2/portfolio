@@ -13,6 +13,14 @@
 TASK-026 | Add GatherBriefSection and GatherScopeSection + wire into page | Completed 2026-02-25 | Files: components/gather/GatherBriefSection.tsx (new), components/gather/GatherScopeSection.tsx (new), app/gather/page.tsx
 TASK-027 | Add body copy to Onboarding and The Event Page decision blocks | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
 TASK-028 | Add body copy for Map, Profile, and Event Creation decision blocks with bold markup | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx, components/gather/GatherDecisionBlock.tsx
+TASK-029 | Replace gather hero placeholder with real assets | Completed 2026-02-26 | Files: app/gather/page.tsx
+TASK-030 | Replace Onboarding placeholder with onboarding.webm, vertically centered | Completed 2026-02-26 | Files: components/gather/GatherDecisionBlock.tsx, components/gather/GatherDesignDecisionsSection.tsx
+TASK-031 | Build Inter typography specimen in GatherVisualDirectionSection | Completed 2026-02-26 | Files: app/layout.tsx, components/gather/GatherVisualDirectionSection.tsx
+TASK-032 | Add map-comparison.png to Map decision block, vertically centered | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-033 | MapComparisonVisual — video-to-PNG handoff in Map decision block | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-034 | Per-section width — GatherDesignDecisionsSection breaks out to max-w-6xl | Completed 2026-02-26 | Files: 17 components (CaseStudyLayout, CaseStudyHero, ProjectMeta, all section components across both pages, GatherDecisionBlock)
+
+TASK-035 | Fix MapComparisonVisual height mismatch and z-index opacity layering | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
 
 
 

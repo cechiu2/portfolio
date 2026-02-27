@@ -8,7 +8,7 @@ export default function GatherOutcomeSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="outcome-heading">
+    <section aria-labelledby="outcome-heading" className="mx-auto max-w-3xl">
       <motion.div
         className="rounded-2xl bg-blush/20 px-8 py-10 sm:px-10 sm:py-12"
         initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 20 }}

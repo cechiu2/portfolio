@@ -9,7 +9,7 @@ interface CaseStudyLayoutProps {
 export default function CaseStudyLayout({ children }: CaseStudyLayoutProps) {
   return (
     <main id="main-content">
-      <div className="mx-auto max-w-3xl px-6 py-16 space-y-20">
+      <div className="px-6 py-16 space-y-20">
         {children}
       </div>
     </main>

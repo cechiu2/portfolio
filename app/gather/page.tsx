@@ -32,14 +32,11 @@ export default function GatherPage() {
     <>
       <Header />
       <CaseStudyLayout>
-        {/* TODO: replace placeholder video with /videos/gather-hero.webm + /videos/gather-hero.mp4
-            and poster with /images/gather-poster.png once assets are ready */}
         <CaseStudyHero
           title="Gather"
           subtitle="Designing a full mobile event discovery app for a startup — from onboarding to heatmap."
-          videoSrc="/videos/scrollthrough.webm"
-          videoSrcMp4="/videos/gather-hero.mp4"
-          videoPoster="/images/gather-poster.png"
+          videoSrc="/videos/gather-hero.webm"
+          videoPoster="/images/gather-hero.png"
           videoAlt="Scrollthrough of the Gather mobile app design"
         />
 

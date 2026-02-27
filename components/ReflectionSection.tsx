@@ -12,7 +12,7 @@ export default function ReflectionSection({ paragraphs }: ReflectionSectionProps
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="reflection-heading">
+    <section aria-labelledby="reflection-heading" className="mx-auto max-w-3xl">
       <motion.div
         initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

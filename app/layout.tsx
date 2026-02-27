@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Young_Serif, Geist } from "next/font/google";
+import { Young_Serif, Geist, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
@@ -10,6 +10,13 @@ const youngSerif = Young_Serif({
   variable: "--font-young-serif",
   subsets: ["latin"],
   weight: "400",
+});
+
+// Inter — used for the typography specimen in the Gather case study.
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 // Geist Sans — variable font, all weights available without explicit weight list.
@@ -42,7 +49,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon1.ico" />
       </head>
       <body
-        className={`${youngSerif.variable} ${geistSans.variable} ${cyrene.variable} antialiased`}
+        className={`${youngSerif.variable} ${geistSans.variable} ${cyrene.variable} ${inter.variable} antialiased`}
       >
         <a
           href="#main-content"

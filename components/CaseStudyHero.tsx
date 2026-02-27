@@ -31,7 +31,7 @@ export default function CaseStudyHero({
   const prefersReduced = useReducedMotion();
 
   return (
-    <div>
+    <div className="mx-auto max-w-3xl">
       {/* Title — fades in on load */}
       <motion.h1
         className="text-5xl leading-tight text-primary"

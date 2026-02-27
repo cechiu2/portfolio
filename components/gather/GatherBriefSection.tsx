@@ -26,7 +26,7 @@ export default function GatherBriefSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="brief-heading">
+    <section aria-labelledby="brief-heading" className="mx-auto max-w-3xl">
       <h2
         id="brief-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-8"

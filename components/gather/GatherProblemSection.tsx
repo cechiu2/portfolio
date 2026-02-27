@@ -25,7 +25,7 @@ export default function GatherProblemSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="story-heading">
+    <section aria-labelledby="story-heading" className="mx-auto max-w-3xl">
       <h2
         id="story-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-8"

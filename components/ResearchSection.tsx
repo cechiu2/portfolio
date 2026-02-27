@@ -32,7 +32,7 @@ export default function ResearchSection({ children, cards }: ResearchSectionProp
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="research-heading">
+    <section aria-labelledby="research-heading" className="mx-auto max-w-3xl">
       <h2
         id="research-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-4"

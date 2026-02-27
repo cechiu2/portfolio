@@ -33,7 +33,7 @@ export default function ProjectMeta({ items }: ProjectMetaProps) {
   const prefersReduced = useReducedMotion();
 
   return (
-    <div className="border-t border-b border-primary/10 py-6">
+    <div className="mx-auto max-w-3xl border-t border-b border-primary/10 py-6">
       <motion.dl
         className="grid grid-cols-2 gap-y-6 sm:grid-cols-4 sm:gap-y-0"
         variants={containerVariants}

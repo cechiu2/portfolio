@@ -2,7 +2,7 @@
 
 // GatherVisualDirectionSection — visual direction section for the Gather case study.
 // Two-column layout on desktop: prose on the left, color palette + typography
-// specimen placeholder on the right. Stacked on mobile.
+// specimen on the right. Stacked on mobile.
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 // TODO: confirm exact hex values with final Figma file and update here.
@@ -10,6 +10,13 @@ const palette = [
   { hex: "#0A0A0A", label: "Primary" },
   { hex: "#7C3AED", label: "Accent" },
   { hex: "#FFFFFF", label: "Surface", border: true },
+];
+
+const typeScale = [
+  { label: "32px — Semi Bold", size: "32px", weight: 600, specimen: "Your Guide to What's Happening" },
+  { label: "18px — Medium",    size: "18px", weight: 500, specimen: "Spin City: Brooklyn" },
+  { label: "16px — Regular",   size: "16px", weight: 400, specimen: "543 Pacific St, Brooklyn, NY" },
+  { label: "12px — Regular",   size: "12px", weight: 400, specimen: "July 13, 2024 • 9:00pm - 1:00am" },
 ];
 
 const containerVariants: Variants = {
@@ -32,7 +39,7 @@ export default function GatherVisualDirectionSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="visual-direction-heading">
+    <section aria-labelledby="visual-direction-heading" className="mx-auto max-w-3xl">
       <h2
         id="visual-direction-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-8"
@@ -70,7 +77,7 @@ export default function GatherVisualDirectionSection() {
           </p>
         </motion.div>
 
-        {/* Right — color palette + typography placeholder */}
+        {/* Right — color palette + typography specimen */}
         <motion.div variants={itemVariants} className="space-y-8">
           {/* Color swatches */}
           <div>
@@ -96,16 +103,25 @@ export default function GatherVisualDirectionSection() {
             </div>
           </div>
 
-          {/* Typography specimen placeholder */}
-          {/* TODO: replace with real typography specimen once typeface is confirmed */}
+          {/* Typography specimen */}
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-primary/60">
               Typography
             </p>
-            <div className="rounded-xl bg-primary/5 px-5 py-6">
-              <p className="text-sm italic text-primary/60">
-                Typography specimen coming soon.
-              </p>
+            <div className="rounded-xl border border-primary/10 divide-y divide-primary/10 px-5">
+              {typeScale.map(({ label, size, weight, specimen }) => (
+                <div key={label} className="flex items-start gap-4 py-4">
+                  <p className="w-28 shrink-0 pt-[3px] text-[10px] font-semibold uppercase tracking-widest text-primary/40">
+                    {label}
+                  </p>
+                  <p
+                    className="text-primary leading-tight"
+                    style={{ fontSize: size, fontWeight: weight, fontFamily: "var(--font-inter)" }}
+                  >
+                    {specimen}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>

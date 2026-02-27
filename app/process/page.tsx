@@ -25,7 +25,7 @@ export default function ProcessPage() {
             Process
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-primary/70">
-            Placeholder — design and engineering process will go here.
+            Under construction! Come back soon to see what I've built here.
           </p>
         </section>
       </main>

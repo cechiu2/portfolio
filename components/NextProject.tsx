@@ -27,7 +27,7 @@ export default function NextProject({
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-label="Next project">
+    <section aria-label="Next project" className="mx-auto max-w-3xl">
       <motion.div
         className="border-t border-primary/10 pt-12"
         initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 20 }}

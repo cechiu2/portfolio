@@ -14,6 +14,8 @@ const projects = [
     year: "2026",
     href: "/gather",
     placeholderGradient: "bg-gradient-to-br from-blush to-purple",
+    videoSrc: "/videos/gather-hero.webm",
+    videoPoster: "/images/gather-hero.png",
   },
   {
     title: "Goodreads iOS Redesign",

@@ -49,7 +49,7 @@ export default function DesignDecisionsSection({
   const blockRefs = [ref0, ref1, ref2];
 
   return (
-    <section aria-labelledby="design-decisions-heading">
+    <section aria-labelledby="design-decisions-heading" className="mx-auto max-w-3xl">
       <h2
         id="design-decisions-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-4"

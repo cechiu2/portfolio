@@ -30,7 +30,7 @@ export default function GatherApproachSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="approach-heading">
+    <section aria-labelledby="approach-heading" className="mx-auto max-w-3xl">
       <h2
         id="approach-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-4"

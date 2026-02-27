@@ -26,7 +26,7 @@ export default function GatherScopeSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section aria-labelledby="scope-heading">
+    <section aria-labelledby="scope-heading" className="mx-auto max-w-3xl">
       <h2
         id="scope-heading"
         className="text-xs font-semibold uppercase tracking-widest text-purple mb-8"
