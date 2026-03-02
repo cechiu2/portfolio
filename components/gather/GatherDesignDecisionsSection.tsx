@@ -119,6 +119,58 @@ function RSVPFlowVideo() {
   );
 }
 
+// Profile visual — plays profile.webm once on scroll-in, then fades out to reveal the static PNG.
+// Follows the same pattern as MapComparisonVisual. Reduced-motion: static img only.
+function ProfileVisual() {
+  const prefersReduced = useReducedMotion();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isInView = useInView(containerRef, { once: true });
+  const [videoEnded, setVideoEnded] = useState(false);
+
+  useEffect(() => {
+    if (prefersReduced) {
+      setVideoEnded(true);
+      return;
+    }
+    if (isInView && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [isInView, prefersReduced]);
+
+  return (
+    <div ref={containerRef} className="relative w-full aspect-[1548/1164] rounded-2xl overflow-hidden">
+      {/* Static PNG — always at full opacity underneath the video (z-0, no transition).
+          TODO: add annotation overlays on top of this img later */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/profile.png"
+        alt="Side by side comparison of personal profile view and others profile view in the Gather app"
+        width="100%"
+        height="100%"
+        loading="eager"
+        className="absolute inset-0 w-full h-full object-contain z-0"
+      />
+      {/* Video — sits above the PNG (z-10). Fades out on end, revealing the img beneath. */}
+      {!prefersReduced && (
+        <video
+          ref={videoRef}
+          muted
+          playsInline
+          poster="/images/profile.png"
+          onEnded={() => setVideoEnded(true)}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 z-10 ${
+            videoEnded ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
+          <source src="/videos/profile.webm" type="video/webm" />
+          <source src="/videos/profile.mp4" type="video/mp4" />
+        </video>
+      )}
+    </div>
+  );
+}
+
 // Map visual — plays map-comparison.webm once on scroll-in, crossfades to the static PNG on end.
 // Container aspect ratio is locked to the PNG's natural dimensions (1576×1182) so video and
 // image always share identical box dimensions. Plain <img> avoids Next.js Image sizing conflicts.
@@ -219,6 +271,8 @@ const decisions: { number: string; title: string; body: ReactNode; reverse: bool
   {
     number: "04",
     title: "The Profile",
+    visuals: <ProfileVisual />,
+    centerVisual: true,
     body: (
       <>
         <p>Social app profiles are usually built around self-presentation — carefully curated, follower-count-forward, designed to be seen. I made a deliberate choice to design Gather's profile differently: as a <strong>personal dashboard</strong> first.</p>
