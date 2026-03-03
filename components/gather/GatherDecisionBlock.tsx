@@ -32,10 +32,10 @@ export default function GatherDecisionBlock({
 
   return (
     <motion.div
-      initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={prefersReduced ? false : { opacity: 0, y: 28 }}
+      whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+      viewport={prefersReduced ? undefined : { once: true, margin: "-80px" }}
+      transition={prefersReduced ? undefined : { duration: 0.5, ease: "easeOut" }}
     >
       {/* flex-col on mobile (text first, visuals below); flex-row or flex-row-reverse on desktop */}
       <div

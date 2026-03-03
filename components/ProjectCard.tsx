@@ -76,6 +76,11 @@ export default function ProjectCard({
               className="h-full w-full object-cover"
             >
               <source src={videoSrc} type="video/webm" />
+              {/* Static fallback for browsers that cannot play video */}
+              {videoPoster && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={videoPoster} alt="" className="h-full w-full object-cover" />
+              )}
             </video>
           )
         ) : imageSrc ? (

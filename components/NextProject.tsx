@@ -30,10 +30,10 @@ export default function NextProject({
     <section aria-label="Next project" className="mx-auto max-w-3xl">
       <motion.div
         className="border-t border-primary/10 pt-12"
-        initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        initial={prefersReduced ? false : { opacity: 0, y: 20 }}
+        whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+        viewport={prefersReduced ? undefined : { once: true, margin: "-40px" }}
+        transition={prefersReduced ? undefined : { duration: 0.5, ease: "easeOut" }}
       >
         {href ? (
           <Link

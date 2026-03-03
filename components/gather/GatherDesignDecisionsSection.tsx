@@ -33,6 +33,8 @@ function OnboardingVideo() {
       className="w-full h-auto rounded-2xl"
     >
       <source src="/videos/onboarding.webm" type="video/webm" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/onboarding.png" alt="Three-screen onboarding flow for the Gather app: splash, phone number entry, and SMS verification" className="w-full h-auto" />
     </video>
   );
 }
@@ -69,6 +71,8 @@ function EventCreationVideo() {
       }}
     >
       <source src="/videos/event-creation.webm" type="video/webm" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/event-creation.png" alt="Event creation flow for the Gather app showing toggleable fields for event details and settings" className="w-full h-auto" />
     </video>
   );
 }
@@ -114,6 +118,8 @@ function RSVPFlowVideo() {
       >
         <source src="/videos/rsvpflow.webm" type="video/webm" />
         <source src="/videos/rsvpflow.mp4" type="video/mp4" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/rsvpflow.png" alt="Event page and RSVP interaction for the Gather app: hero image, event details, and 'I'm there!' confirmation" className="absolute inset-0 w-full h-full object-contain" />
       </video>
     </div>
   );
@@ -165,6 +171,8 @@ function ProfileVisual() {
         >
           <source src="/videos/profile.webm" type="video/webm" />
           <source src="/videos/profile.mp4" type="video/mp4" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/profile.png" alt="Side by side comparison of personal profile view and others profile view in the Gather app" className="absolute inset-0 w-full h-full object-contain" />
         </video>
       )}
     </div>
@@ -219,6 +227,8 @@ function MapComparisonVisual() {
         >
           <source src="/videos/map-comparison.webm" type="video/webm" />
           <source src="/videos/map-comparison.mp4" type="video/mp4" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/map-comparison.png" alt="Two states of the Gather map: standard pin view on the left, heatmap overlay on the right" className="absolute inset-0 w-full h-full object-contain" />
         </video>
       )}
     </div>

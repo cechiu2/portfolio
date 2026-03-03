@@ -46,7 +46,7 @@ export default function DecisionBlock({
       <div className="space-y-6">
         {FIELDS.map(({ label, key }) => (
           <div key={label}>
-            <p className="mb-1 text-xs font-bold uppercase tracking-widest text-primary/40">
+            <p className="mb-1 text-xs font-bold uppercase tracking-widest text-primary/70">
               {label}
             </p>
             <p className="text-base leading-relaxed text-primary/80">

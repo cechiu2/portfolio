@@ -41,10 +41,10 @@ export default function GatherApproachSection() {
       {/* Prose */}
       <motion.div
         className="space-y-5 text-base leading-relaxed text-primary/80"
-        initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.45, ease: "easeOut" }}
+        initial={prefersReduced ? false : { opacity: 0, y: 16 }}
+        whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+        viewport={prefersReduced ? undefined : { once: true, margin: "-60px" }}
+        transition={prefersReduced ? undefined : { duration: 0.45, ease: "easeOut" }}
       >
         <p>
           Because the team was small and working fast, my process was

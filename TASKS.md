@@ -38,6 +38,10 @@ TASK-035 | Fix MapComparisonVisual height mismatch and z-index opacity layering 
 
 
 
+TASK-036 | Full accessibility pass — 6 auto-fixes across 5 components | Completed 2026-03-03 | Files: components/DecisionBlock.tsx, components/Footer.tsx, components/CaseStudyHero.tsx, components/ProjectCard.tsx, components/gather/GatherDesignDecisionsSection.tsx
+TASK-037 | Fix "Planned" badge contrast in GatherScopeSection (text-primary/50 → /70) | Completed 2026-03-03 | Files: components/gather/GatherScopeSection.tsx
+TASK-038 | Remove reduced-motion fade-in from 7 components — instant render instead | Completed 2026-03-03 | Files: components/OutcomeSection.tsx, components/ReflectionSection.tsx, components/NextProject.tsx, components/gather/GatherScopeSection.tsx, components/gather/GatherApproachSection.tsx, components/gather/GatherDecisionBlock.tsx, components/gather/GatherOutcomeSection.tsx
+
 <!-- TASK TEMPLATE — copy this block for each new task
 ### TASK-XXX: [Short task name]
 **Stage:** [Planning | In Progress | Review | Blocked]

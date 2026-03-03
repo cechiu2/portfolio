@@ -62,7 +62,14 @@ export default function Footer() {
 
         <p ref={ref} className="flex items-center gap-2 text-sm text-primary">
           This website was designed and coded by Claire
-          <Image src={src} alt="A small bunny" width={20} height={20} className="-translate-y-[3px] cursor-pointer" onClick={handleClick} />
+          {/* Bunny easter egg — wrapped in a button for keyboard + screen reader accessibility */}
+          <button
+            onClick={handleClick}
+            aria-label="Make the bunny hop"
+            className="rounded focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2"
+          >
+            <Image src={src} alt="" aria-hidden="true" width={20} height={20} className="-translate-y-[3px]" />
+          </button>
         </p>
 
         <nav aria-label="Footer links" className="flex items-center gap-6">
@@ -71,14 +78,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile (opens in new tab)"
-            className="text-sm text-primary/60 transition-colors hover:text-purple focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 rounded-sm"
+            className="text-sm text-primary/80 transition-colors hover:text-purple focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 rounded-sm"
           >
             LinkedIn
           </a>
           <a
             href="mailto:claire.chiu1285@gmail.com"
             aria-label="Send email to Claire"
-            className="text-sm text-primary/60 transition-colors hover:text-purple focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 rounded-sm"
+            className="text-sm text-primary/80 transition-colors hover:text-purple focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-plum focus-visible:ring-offset-2 rounded-sm"
           >
             Email
           </a>

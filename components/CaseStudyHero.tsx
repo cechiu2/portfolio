@@ -83,6 +83,9 @@ export default function CaseStudyHero({
           >
             <source src={videoSrc} type="video/webm" />
             {videoSrcMp4 && <source src={videoSrcMp4} type="video/mp4" />}
+            {/* Static fallback for browsers that cannot play video */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={videoPoster} alt={videoAlt} className="w-full h-auto" />
           </video>
         )}
       </motion.div>

@@ -14,10 +14,10 @@ export default function ReflectionSection({ paragraphs }: ReflectionSectionProps
   return (
     <section aria-labelledby="reflection-heading" className="mx-auto max-w-3xl">
       <motion.div
-        initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        initial={prefersReduced ? false : { opacity: 0, y: 20 }}
+        whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+        viewport={prefersReduced ? undefined : { once: true, margin: "-60px" }}
+        transition={prefersReduced ? undefined : { duration: 0.5, ease: "easeOut" }}
       >
         <h2
           id="reflection-heading"

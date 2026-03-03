@@ -22,10 +22,10 @@ export default function OutcomeSection({
     <section aria-labelledby="outcome-heading" className="mx-auto max-w-3xl">
       <motion.div
         className="rounded-2xl bg-blush/20 px-8 py-10 sm:px-10 sm:py-12 space-y-8"
-        initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        initial={prefersReduced ? false : { opacity: 0, y: 20 }}
+        whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+        viewport={prefersReduced ? undefined : { once: true, margin: "-60px" }}
+        transition={prefersReduced ? undefined : { duration: 0.5, ease: "easeOut" }}
       >
         <h2
           id="outcome-heading"
