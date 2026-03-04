@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Young_Serif, Geist, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/components/CustomCursor";
 import FaviconAnimator from "@/components/FaviconAnimator";
 
@@ -66,6 +67,7 @@ export default function RootLayout({
           interval={150}
         />
         {children}
+        <Analytics />
         <CustomCursor />
       </body>
     </html>

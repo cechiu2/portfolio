@@ -81,3 +81,4 @@ TASK-038 | Remove reduced-motion fade-in from 7 components — instant render in
 TASK-039 | Build out process page — editorial layout with intro + 4 sections | Completed 2026-03-04 | Files: app/process/page.tsx
 TASK-040 | Fill in process page with real copy across intro and 4 sections | Completed 2026-03-04 | Files: app/process/page.tsx
 TASK-041 | Add copy for sections 3 and 4 of process page | Completed 2026-03-04 | Files: app/process/page.tsx
+TASK-042 | Add Vercel Analytics to root layout | Completed 2026-03-04 | Files: app/layout.tsx
