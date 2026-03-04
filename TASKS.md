@@ -10,37 +10,7 @@
 
 ## Active Tasks
 
-TASK-026 | Add GatherBriefSection and GatherScopeSection + wire into page | Completed 2026-02-25 | Files: components/gather/GatherBriefSection.tsx (new), components/gather/GatherScopeSection.tsx (new), app/gather/page.tsx
-TASK-027 | Add body copy to Onboarding and The Event Page decision blocks | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
-TASK-028 | Add body copy for Map, Profile, and Event Creation decision blocks with bold markup | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx, components/gather/GatherDecisionBlock.tsx
-TASK-029 | Replace gather hero placeholder with real assets | Completed 2026-02-26 | Files: app/gather/page.tsx
-TASK-030 | Replace Onboarding placeholder with onboarding.webm, vertically centered | Completed 2026-02-26 | Files: components/gather/GatherDecisionBlock.tsx, components/gather/GatherDesignDecisionsSection.tsx
-TASK-031 | Build Inter typography specimen in GatherVisualDirectionSection | Completed 2026-02-26 | Files: app/layout.tsx, components/gather/GatherVisualDirectionSection.tsx
-TASK-032 | Add map-comparison.png to Map decision block, vertically centered | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
-TASK-033 | MapComparisonVisual — video-to-PNG handoff in Map decision block | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
-TASK-034 | Per-section width — GatherDesignDecisionsSection breaks out to max-w-6xl | Completed 2026-02-26 | Files: 17 components (CaseStudyLayout, CaseStudyHero, ProjectMeta, all section components across both pages, GatherDecisionBlock)
-
-TASK-035 | Fix MapComparisonVisual height mismatch and z-index opacity layering | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TASK-036 | Full accessibility pass — 6 auto-fixes across 5 components | Completed 2026-03-03 | Files: components/DecisionBlock.tsx, components/Footer.tsx, components/CaseStudyHero.tsx, components/ProjectCard.tsx, components/gather/GatherDesignDecisionsSection.tsx
-TASK-037 | Fix "Planned" badge contrast in GatherScopeSection (text-primary/50 → /70) | Completed 2026-03-03 | Files: components/gather/GatherScopeSection.tsx
-TASK-038 | Remove reduced-motion fade-in from 7 components — instant render instead | Completed 2026-03-03 | Files: components/OutcomeSection.tsx, components/ReflectionSection.tsx, components/NextProject.tsx, components/gather/GatherScopeSection.tsx, components/gather/GatherApproachSection.tsx, components/gather/GatherDecisionBlock.tsx, components/gather/GatherOutcomeSection.tsx
+<!-- No active tasks -->
 
 <!-- TASK TEMPLATE — copy this block for each new task
 ### TASK-XXX: [Short task name]
@@ -85,7 +55,6 @@ TASK-012 | Add video mockup for Navigation Restructure decision block | Complete
 TASK-013 | Fix phone screen swap + sticky phone centering in DesignDecisionsSection | Completed 2026-02-25 | Files: components/DesignDecisionsSection.tsx
 TASK-014 | Add video mockups for Tracking and Social decision blocks | Completed 2026-02-25 | Files: components/TrackingVideoMockup.tsx (new), components/SocialVideoMockup.tsx (new), app/goodreads/page.tsx
 TASK-015 | Add autoplay video thumbnail to Goodreads ProjectCard on homepage | Completed 2026-02-25 | Files: components/ProjectCard.tsx, app/page.tsx
-
 TASK-016 | Replace CaseStudyHero before/after with single hero video | Completed 2026-02-25 | Files: components/CaseStudyHero.tsx, app/goodreads/page.tsx
 TASK-017 | Scaffold /gather case study page with empty shell components | Completed 2026-02-25 | Files: components/gather/GatherProblemSection.tsx (new), components/gather/GatherApproachSection.tsx (new), components/gather/GatherVisualDirectionSection.tsx (new), components/gather/GatherDesignDecisionsSection.tsx (new), components/gather/GatherOutcomeSection.tsx (new), app/gather/page.tsx
 TASK-018 | Wire up CaseStudyHero and ProjectMeta props on /gather | Completed 2026-02-25 | Files: components/CaseStudyHero.tsx, app/gather/page.tsx
@@ -95,5 +64,20 @@ TASK-021 | Build GatherDecisionBlock + fill in GatherDesignDecisionsSection | Co
 TASK-022 | Fill in GatherOutcomeSection; wire up ReflectionSection and NextProject | Completed 2026-02-25 | Files: components/gather/GatherOutcomeSection.tsx, app/gather/page.tsx
 TASK-023 | Accessibility pass on /components/gather/ — 7 issues fixed | Completed 2026-02-25 | Files: components/gather/GatherApproachSection.tsx, components/gather/GatherVisualDirectionSection.tsx, components/gather/GatherDecisionBlock.tsx
 TASK-024 | Fix Framer Motion Variants TypeScript errors across 5 components | Completed 2026-02-25 | Files: components/gather/GatherProblemSection.tsx, components/gather/GatherApproachSection.tsx, components/gather/GatherVisualDirectionSection.tsx, components/ProjectMeta.tsx, components/ResearchSection.tsx
-
 TASK-025 | NextProject coming soon state + wire Goodreads→Gather navigation | Completed 2026-02-25 | Files: components/NextProject.tsx, app/goodreads/page.tsx, app/gather/page.tsx
+TASK-026 | Add GatherBriefSection and GatherScopeSection + wire into page | Completed 2026-02-25 | Files: components/gather/GatherBriefSection.tsx (new), components/gather/GatherScopeSection.tsx (new), app/gather/page.tsx
+TASK-027 | Add body copy to Onboarding and The Event Page decision blocks | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-028 | Add body copy for Map, Profile, and Event Creation decision blocks with bold markup | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx, components/gather/GatherDecisionBlock.tsx
+TASK-029 | Replace gather hero placeholder with real assets | Completed 2026-02-26 | Files: app/gather/page.tsx
+TASK-030 | Replace Onboarding placeholder with onboarding.webm, vertically centered | Completed 2026-02-26 | Files: components/gather/GatherDecisionBlock.tsx, components/gather/GatherDesignDecisionsSection.tsx
+TASK-031 | Build Inter typography specimen in GatherVisualDirectionSection | Completed 2026-02-26 | Files: app/layout.tsx, components/gather/GatherVisualDirectionSection.tsx
+TASK-032 | Add map-comparison.png to Map decision block, vertically centered | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-033 | MapComparisonVisual — video-to-PNG handoff in Map decision block | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-034 | Per-section width — GatherDesignDecisionsSection breaks out to max-w-6xl | Completed 2026-02-26 | Files: 17 components (CaseStudyLayout, CaseStudyHero, ProjectMeta, all section components across both pages, GatherDecisionBlock)
+TASK-035 | Fix MapComparisonVisual height mismatch and z-index opacity layering | Completed 2026-02-26 | Files: components/gather/GatherDesignDecisionsSection.tsx
+TASK-036 | Full accessibility pass — 6 auto-fixes across 5 components | Completed 2026-03-03 | Files: components/DecisionBlock.tsx, components/Footer.tsx, components/CaseStudyHero.tsx, components/ProjectCard.tsx, components/gather/GatherDesignDecisionsSection.tsx
+TASK-037 | Fix "Planned" badge contrast in GatherScopeSection (text-primary/50 → /70) | Completed 2026-03-03 | Files: components/gather/GatherScopeSection.tsx
+TASK-038 | Remove reduced-motion fade-in from 7 components — instant render instead | Completed 2026-03-03 | Files: components/OutcomeSection.tsx, components/ReflectionSection.tsx, components/NextProject.tsx, components/gather/GatherScopeSection.tsx, components/gather/GatherApproachSection.tsx, components/gather/GatherDecisionBlock.tsx, components/gather/GatherOutcomeSection.tsx
+TASK-039 | Build out process page — editorial layout with intro + 4 sections | Completed 2026-03-04 | Files: app/process/page.tsx
+TASK-040 | Fill in process page with real copy across intro and 4 sections | Completed 2026-03-04 | Files: app/process/page.tsx
+TASK-041 | Add copy for sections 3 and 4 of process page | Completed 2026-03-04 | Files: app/process/page.tsx

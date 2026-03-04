@@ -14,7 +14,9 @@ export default function GatherOutcomeSection() {
         initial={prefersReduced ? false : { opacity: 0, y: 20 }}
         whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
         viewport={prefersReduced ? undefined : { once: true, margin: "-60px" }}
-        transition={prefersReduced ? undefined : { duration: 0.5, ease: "easeOut" }}
+        transition={
+          prefersReduced ? undefined : { duration: 0.5, ease: "easeOut" }
+        }
       >
         <h2
           id="outcome-heading"
@@ -24,10 +26,11 @@ export default function GatherOutcomeSection() {
         </h2>
 
         <p className="text-base leading-relaxed text-primary/80">
-          The app is currently in development and approaching release. The founder and frontend
-          team have continued to reach out for design support even beyond the initial engagement
-          — a signal the working relationship and the designs have held up well as the product
-          has moved closer to shipping.
+          The app is currently in development and approaching release. The
+          founder and frontend team have continued to reach out for design
+          support even beyond the initial engagement, which signals to me that
+          our working relationship and the designs have held up well as the
+          product has moved closer to shipping.
         </p>
       </motion.div>
     </section>

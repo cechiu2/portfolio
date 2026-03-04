@@ -34,7 +34,7 @@ export default function GatherPage() {
       <CaseStudyLayout>
         <CaseStudyHero
           title="Gather"
-          subtitle="Designing a full mobile event discovery app for a startup — from onboarding to heatmap."
+          subtitle="Designing a full mobile event discovery app for a startup, from onboarding to heatmap."
           videoSrc="/videos/gather-hero.webm"
           videoPoster="/images/gather-hero.png"
           videoAlt="Scrollthrough of the Gather mobile app design"
@@ -58,9 +58,9 @@ export default function GatherPage() {
 
         <ReflectionSection
           paragraphs={[
-            "Gather was my first professional design engagement and the project that showed me how well my engineering background translates into design practice. Understanding component reusability, implementation complexity, and system thinking didn't just make me easier to work with — it made my designs better.",
+            "Gather was my first professional design engagement and the project that showed me how well my engineering background translates into design practice. I believe my understanding of component reusability, implementation complexity, and system thinking made my designs better.",
             "With more time I'd want to conduct user research beyond the founder's user stories, especially around the map interaction which is novel enough to benefit from real usability testing. I'd also want to design out the AI planning assistant flow, which I think has the potential to be one of the most distinctive features in the product.",
-            "Accessibility is something I'd approach more intentionally on future projects — contrast ratios on dark backgrounds require extra care, and designing for one-handed use is especially relevant for an app people will use while out at events.",
+            "Accessibility is something I'd approach more intentionally on future projects. Elements like contrast ratios on dark backgrounds require extra care, and designing for one-handed use is especially relevant for an app people will use while out at events.",
           ]}
         />
 

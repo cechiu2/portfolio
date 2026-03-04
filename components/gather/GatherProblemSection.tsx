@@ -61,7 +61,7 @@ export default function GatherProblemSection() {
         >
           <p>
             Event planning apps have a visibility problem. The most popular ones
-            are built around private or ticketed events, which works well if you
+            are built around private or ticketed events, which work best if you
             already know what you&rsquo;re looking for. But what about the
             spontaneous energy of a city? The open parties, the pop-up
             gatherings, the events you didn&rsquo;t know you wanted to go to

@@ -45,19 +45,19 @@ export default function GatherScopeSection() {
         <p>
           Working from the founder&rsquo;s V0/V1/V2 framework, I made active
           decisions about what to design first and what to defer. V0 covered the
-          essential flows — onboarding, event discovery, the map, event pages,
+          essential flows like onboarding, event discovery, the map, event pages,
           RSVP, basic profiles. V1 added filtering, event updates, and social
           features like followers and find people. V2 features including the
           heatmap&rsquo;s friend-visibility toggle and a planned AI event
-          planning assistant — a conversational interface that would help hosts
-          plan and describe events — are scoped for future design work.
+          planning assistant, a conversational interface that would help hosts
+          plan and describe events, are scoped for future design work.
         </p>
         <p>
-          This wasn&rsquo;t just a checklist. Every deferred feature was a
+          Every deferred feature was a
           deliberate choice to protect the product&rsquo;s focus. The most
           important example: <strong>no social feed</strong>. A feed was
           discussed and declined. Without it, the app stays focused on its
-          primary job — helping people find and attend events — rather than
+          primary job of helping people find and attend events rather than
           becoming a platform that incentivizes hosting events for social
           performance rather than genuine gathering.
         </p>
